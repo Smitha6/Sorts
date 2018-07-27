@@ -19,6 +19,8 @@ public class HW8 {
 
 
 
+
+
         //fill random
         for(int i = 0; i < size; i++){
             ran = r.nextInt((100 - 1) + 1);
@@ -39,8 +41,9 @@ public class HW8 {
         /**---INSERTION SORT---**/
         System.out.println("---INSERTION SORT---");
         //random
+        Integer[] newRanArr = randomArr;
         startTime = System.currentTimeMillis();
-        Sort.insertionSort(randomArr);
+        Sort.insertionSort(newRanArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Insertion Sort - Random Time: " + endTime);
 
@@ -51,8 +54,9 @@ public class HW8 {
         System.out.println("Insertion Sort - Ascending Time: " + endTime);
 
         //descending
+        Integer[] newDesArr = descendingArr;
         startTime = System.currentTimeMillis();
-        Sort.insertionSort(descendingArr);
+        Sort.insertionSort(newDesArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Insertion Sort - Descending Time: " + endTime);
 
@@ -60,8 +64,9 @@ public class HW8 {
         /**---HEAP SORT---**/
         System.out.println("---HEAP SORT---");
         //random
+        newRanArr = randomArr;
         startTime = System.currentTimeMillis();
-        Sort.heapsort(randomArr);
+        Sort.heapsort(newRanArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Heap Sort - Random Time: " + endTime);
 
@@ -72,17 +77,19 @@ public class HW8 {
         System.out.println("Heap Sort - Ascending Time: " + endTime);
 
         //descending
+        newDesArr = descendingArr;
         startTime = System.currentTimeMillis();
-        Sort.heapsort(descendingArr);
+        Sort.heapsort(newDesArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Heap Sort - Descending Time: " + endTime);
 
 
-        /**---MERGE SORT---**/
+        /**---MERGE SORT---*/
         System.out.println("---MERGE SORT---");
         //random
+        newRanArr = randomArr;
         startTime = System.currentTimeMillis();
-        Sort.mergeSort(randomArr);
+        Sort.mergeSort(newRanArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Merge Sort - Random Time: " + endTime);
 
@@ -93,8 +100,9 @@ public class HW8 {
         System.out.println("Merge Sort - Ascending Time: " + endTime);
 
         //descending
+        newDesArr = descendingArr;
         startTime = System.currentTimeMillis();
-        Sort.mergeSort(descendingArr);
+        Sort.mergeSort(newDesArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Merge Sort - Descending Time: " + endTime);
 
@@ -102,8 +110,9 @@ public class HW8 {
         /**---QUICK SORT---**/
         System.out.println("---QUICK SORT---");
         //random
+        newRanArr = randomArr;
         startTime = System.currentTimeMillis();
-        Sort.quicksort(randomArr);
+        Sort.quicksort(newRanArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Quick Sort - Random Time: " + endTime);
 
@@ -114,8 +123,9 @@ public class HW8 {
         System.out.println("Quick Sort - Ascending Time: " + endTime);
 
         //descending
+        newDesArr = descendingArr;
         startTime = System.currentTimeMillis();
-        Sort.quicksort(descendingArr);
+        Sort.quicksort(newDesArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Quick Sort - Descending Time: " + endTime);
 
@@ -123,8 +133,9 @@ public class HW8 {
         /**---QUICK SORT 2---**/
         System.out.println("---QUICK SORT 2---");
         //random
+        newRanArr = randomArr;
         startTime = System.currentTimeMillis();
-        Sort.quicksort2(randomArr);
+        Sort.quicksort2(newRanArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Quick Sort - Random Time: " + endTime);
 
@@ -135,10 +146,16 @@ public class HW8 {
         System.out.println("Quick Sort - Ascending Time: " + endTime);
 
         //descending
+        newDesArr = descendingArr;
         startTime = System.currentTimeMillis();
-        Sort.quicksort2(descendingArr);
+        Sort.quicksort2(newDesArr);
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Quick Sort - Descending Time: " + endTime);
+
+        //DO THIS
+        for (int i = 0; i < newRanArr.length; i++){
+            System.out.println(newRanArr[i]);
+        }
     }
 
 }

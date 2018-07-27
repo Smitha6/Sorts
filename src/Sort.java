@@ -229,27 +229,29 @@ public final class Sort
             insertionSort( a, left, right );
     }
 
-
+    /**
+     ************* QUICK SORT 2 ******************
+     *
+     */
     public static <AnyType extends Comparable<? super AnyType>>
-    void quicksort2( AnyType [ ] a )
-    {
+    void quicksort2( AnyType [ ] a ) {
         quicksort2( a, 0, a.length - 1 );
     }
-    /**QUICKSORT2**/
+
     private static <AnyType extends Comparable<? super AnyType>>
     void quicksort2( AnyType [ ] a, int left, int right )
     {
-        if( left <= right)
-        {
-            AnyType pivot = median3( a, left, right );
+        if(left < right){
+
+            AnyType pivot = a[0];
 
             // Begin partitioning
             int i = left, j = right - 1;
-            for( ; ; )
-            {
+            for( ; ; ){
+
                 while( a[ ++i ].compareTo( pivot ) < 0 ) { }
-                while( a[ --j ].compareTo( pivot ) > 0 ) { }
-                if( i < j)
+                while( j > 1 && a[ --j ].compareTo( pivot ) > 0 ) { }
+                if( i < j )
                     swapReferences( a, i, j );
                 else
                     break;
@@ -260,8 +262,6 @@ public final class Sort
             quicksort2( a, left, i - 1 );    // Sort small elements
             quicksort2( a, i + 1, right );   // Sort large elements
         }
-
-
     }
 
     /**
