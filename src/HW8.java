@@ -130,6 +130,8 @@ public class HW8 {
         System.out.println("Quick Sort - Descending Time: " + endTime);
 
 
+
+
         /**---QUICK SORT 2---**/
         System.out.println("---QUICK SORT 2---");
         //random
@@ -152,7 +154,7 @@ public class HW8 {
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Quick Sort - Descending Time: " + endTime);
 
-        //DO THIS
+
         for (int i = 0; i < newRanArr.length; i++){
             System.out.println(newRanArr[i]);
         }

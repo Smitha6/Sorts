@@ -208,6 +208,7 @@ public final class Sort
         {
             AnyType pivot = median3( a, left, right );
 
+
                 // Begin partitioning
             int i = left, j = right - 1;
             for( ; ; )
@@ -243,14 +244,14 @@ public final class Sort
     {
         if(left < right){
 
-            AnyType pivot = a[0];
+            AnyType pivot = a[right-1];
 
             // Begin partitioning
             int i = left, j = right - 1;
             for( ; ; ){
 
                 while( a[ ++i ].compareTo( pivot ) < 0 ) { }
-                while( j > 1 && a[ --j ].compareTo( pivot ) > 0 ) { }
+                while( j > 0 && a[ --j ].compareTo( pivot ) > 0 ) { }
                 if( i < j )
                     swapReferences( a, i, j );
                 else
