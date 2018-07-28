@@ -230,21 +230,25 @@ public final class Sort
             insertionSort( a, left, right );
     }
 
-    /**
-     ************* QUICK SORT 2 ******************
-     *
-     */
+
     public static <AnyType extends Comparable<? super AnyType>>
     void quicksort2( AnyType [ ] a ) {
         quicksort2( a, 0, a.length - 1 );
     }
-
+    /**
+     ************* QUICK SORT 2 ******************
+     * Removed insertion sort cutoff and always picks
+     * pivot at left most item.
+     * @param a an array of Comparable items.
+     * @param left the left-most index of the subarray.
+     * @param right the right-most index of the subarray.
+     */
     private static <AnyType extends Comparable<? super AnyType>>
     void quicksort2( AnyType [ ] a, int left, int right )
     {
         if(left < right){
 
-            AnyType pivot = a[right-1];
+            AnyType pivot = a[left];
 
             // Begin partitioning
             int i = left, j = right - 1;

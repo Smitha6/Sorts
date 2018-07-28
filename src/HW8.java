@@ -1,7 +1,18 @@
+/**
+ * Homework 8, Summer 2018
+ *
+ * Test sorts.
+ * @author A. Smith
+ */
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class HW8 {
+
+    /**
+     * Test sorts.
+     */
     public static void main(String args[]){
         long startTime;
         long endTime;
@@ -131,7 +142,6 @@ public class HW8 {
 
 
 
-
         /**---QUICK SORT 2---**/
         System.out.println("---QUICK SORT 2---");
         //random
@@ -154,10 +164,6 @@ public class HW8 {
         endTime = System.currentTimeMillis() - startTime;
         System.out.println("Quick Sort - Descending Time: " + endTime);
 
-
-        for (int i = 0; i < newRanArr.length; i++){
-            System.out.println(newRanArr[i]);
-        }
     }
 
 }
